@@ -1,0 +1,63 @@
+.select-container {
+  margin: 12px 0;
+  user-select: none;
+}
+
+.select-container.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.select-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #e0e0e0;
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+
+.select-input {
+  width: 100%;
+  padding: 8px 12px;
+  background-color: rgba(60, 60, 60, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.select-input:hover {
+  background-color: rgba(70, 70, 70, 0.8);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.select-input:focus {
+  border-color: #4a9eff;
+  box-shadow: 0 0 0 2px rgba(74, 158, 255, 0.2);
+}
+
+.select-input option {
+  background-color: #3a3a3a;
+  color: #ffffff;
+  padding: 8px;
+}
+
+.select-input option:hover {
+  background-color: #4a9eff;
+}
+
+/* Hover effects for the entire select container */
+.select-container:hover .select-label {
+  color: #ffffff;
+}
+
+/* Focus styles for accessibility */
+.select-input:focus-visible {
+  outline: 2px solid #4a9eff;
+  outline-offset: 2px;
+}

@@ -1,0 +1,219 @@
+.scene-selector-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.scene-selector-sidebar {
+  width: 720px;
+  max-width: 90vw;
+  height: 100vh;
+  max-height: 90vh;
+  background-color: rgba(30, 30, 30, 0.95);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.scene-selector-header {
+  padding: 24px 24px 20px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  background-color: rgba(40, 40, 40, 0.5);
+  flex-shrink: 0;
+}
+
+.scene-selector-header h1 {
+  margin: 0 0 8px 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.3px;
+}
+
+.scene-selector-subtitle {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 0 8px 0;
+  line-height: 1.4;
+}
+
+.scene-selector-note {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.4);
+  margin: 0 0 16px 0;
+  line-height: 1.4;
+}
+
+.github-link-button {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.github-link-button:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+}
+
+.github-icon {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.scene-list {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+.scene-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scene-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scene-list::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+.scene-list::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.scene-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  display: flex;
+  align-items: stretch;
+}
+
+.scene-item:last-child {
+  border-bottom: none;
+}
+
+.scene-item-button {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 20px 24px;
+  text-align: left;
+  transition: background 0.15s ease;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.scene-item-button:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.scene-item-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.scene-item-title {
+  margin: 0 0 6px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.2px;
+}
+
+.scene-item-description {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.scene-item-arrow {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.3);
+  flex-shrink: 0;
+  transition: all 0.15s ease;
+}
+
+.scene-item-button:hover .scene-item-arrow {
+  color: rgba(255, 255, 255, 0.6);
+  transform: translateX(2px);
+}
+
+.scene-github-link {
+  background: transparent;
+  border: none;
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  padding: 0 16px;
+  transition: all 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.scene-github-link:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .scene-selector-sidebar {
+    width: 100vw;
+  }
+
+  .scene-selector-header {
+    padding: 20px 16px 16px 16px;
+  }
+
+  .scene-selector-header h1 {
+    font-size: 20px;
+  }
+
+  .scene-item-button {
+    padding: 16px 16px;
+  }
+
+  .scene-item-title {
+    font-size: 15px;
+  }
+
+  .scene-item-description {
+    font-size: 12px;
+  }
+
+  .scene-github-link {
+    padding: 0 12px;
+  }
+}
+
